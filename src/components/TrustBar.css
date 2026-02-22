@@ -1,0 +1,69 @@
+/* ===== TRUST BAR / STACK ===== */
+.trust-bar {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.trust-bar-inner {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.trust-bar-label {
+    flex-shrink: 0;
+    padding: 0 2.5rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.trust-bar-track {
+    overflow: hidden;
+    flex: 1;
+}
+
+.trust-bar-items {
+    display: flex;
+    width: max-content;
+    animation: marquee 22s linear infinite;
+}
+
+.trust-bar-items:hover {
+    animation-play-state: paused;
+}
+
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.6rem;
+    margin: 0 0.25rem;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.trust-badge:hover {
+    border-color: rgba(204, 255, 0, 0.3);
+    color: var(--accent);
+    background: rgba(204, 255, 0, 0.04);
+}
+
+.trust-badge-icon {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
