@@ -13,6 +13,8 @@ import PageDesign from './pages/PageDesign';
 import PageDev from './pages/PageDev';
 import PageSEO from './pages/PageSEO';
 import PageMaintenance from './pages/PageMaintenance';
+import PageMentions from './pages/PageMentions';
+import PagePrivacy from './pages/PagePrivacy';
 
 function HomePage() {
   useScrollReveal();
@@ -41,6 +43,8 @@ function App() {
         <Route path="/services/developpement" element={<PageDev />} />
         <Route path="/services/seo" element={<PageSEO />} />
         <Route path="/services/maintenance" element={<PageMaintenance />} />
+        <Route path="/mentions-legales" element={<PageMentions />} />
+        <Route path="/politique-de-confidentialite" element={<PagePrivacy />} />
       </Routes>
     </BrowserRouter>
   );

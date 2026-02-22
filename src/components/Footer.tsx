@@ -45,8 +45,8 @@ export default function Footer() {
                         © 2026 <span>AP13</span> — Tous droits réservés. Fait avec rigueur en France.
                     </p>
                     <div className="footer-legal">
-                        <a href="#">Mentions légales</a>
-                        <a href="#">Politique de confidentialité</a>
+                        <Link to="/mentions-legales">Mentions légales</Link>
+                        <Link to="/politique-de-confidentialite">Politique de confidentialité</Link>
                     </div>
                 </div>
             </div>
