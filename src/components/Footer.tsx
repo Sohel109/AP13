@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
             <div className="container">
                 <div className="footer-grid">
                     <div>
-                        <div className="footer-logo">AP<span>13</span></div>
+                        <Link to="/" className="footer-logo">AP<span>13</span></Link>
                         <p className="footer-tagline">
                             Un duo d'experts spécialisé dans la création de sites web haute performance.
                             Précision, rapidité, approche technique rigoureuse.
@@ -21,19 +22,19 @@ export default function Footer() {
                     <div>
                         <div className="footer-col-title">Services</div>
                         <ul className="footer-links">
-                            <li><a href="#ecosystem">Design d'Interface</a></li>
-                            <li><a href="#ecosystem">Développement Web</a></li>
-                            <li><a href="#ecosystem">Stratégie SEO</a></li>
-                            <li><a href="#ecosystem">Maintenance</a></li>
+                            <li><Link to="/services/design">Design d'Interface</Link></li>
+                            <li><Link to="/services/developpement">Développement Web</Link></li>
+                            <li><Link to="/services/seo">Stratégie SEO</Link></li>
+                            <li><Link to="/services/maintenance">Maintenance</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <div className="footer-col-title">Agence</div>
                         <ul className="footer-links">
-                            <li><a href="#team">L'Équipe</a></li>
-                            <li><a href="#process">Notre Processus</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="/#team">L'Équipe</a></li>
+                            <li><a href="/#process">Notre Processus</a></li>
+                            <li><a href="/#contact">Contact</a></li>
                             <li><a href="#">Portfolio</a></li>
                         </ul>
                     </div>
