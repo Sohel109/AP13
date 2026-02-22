@@ -1,4 +1,5 @@
 import './App.css';
+import { useScrollReveal } from './hooks/useScrollReveal';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustBar from './components/TrustBar';
@@ -9,6 +10,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  useScrollReveal();
+
   return (
     <>
       <Navbar />

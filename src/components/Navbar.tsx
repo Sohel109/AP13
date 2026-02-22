@@ -12,9 +12,9 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="nav-logo">
+      <a href="#hero" className="nav-logo">
         AP<span>13</span>
-      </div>
+      </a>
       <ul className="nav-links">
         <li><a href="#ecosystem">Services</a></li>
         <li><a href="#team">L'Équipe</a></li>

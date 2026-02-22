@@ -4,7 +4,7 @@ export default function BentoGrid() {
     return (
         <section className="ecosystem" id="ecosystem">
             <div className="container">
-                <div className="section-header">
+                <div className="section-header reveal">
                     <div className="section-label">L'Écosystème AP13</div>
                     <h2 className="section-title">Quatre piliers.<br />Un résultat exceptionnel.</h2>
                     <p className="section-desc">Chaque service est pensé comme un levier de croissance, pas comme une case à cocher.</p>
@@ -13,7 +13,7 @@ export default function BentoGrid() {
                 <div className="bento-grid">
 
                     {/* Card 1 — Large: Design */}
-                    <div className="bento-card bento-card-large">
+                    <div className="bento-card bento-card-large reveal reveal-delay-1">
                         <div className="bento-card-number">01 — Design</div>
                         <div className="bento-icon-wrap">◈</div>
                         <div className="bento-card-title">Design d'Interface</div>
@@ -28,10 +28,11 @@ export default function BentoGrid() {
                             <div className="visual-bar-sm" style={{ width: '60%' }} />
                             <div className="visual-bar-sm" style={{ width: '45%' }} />
                         </div>
+                        <a href="#contact" className="bento-cta">Lancer un projet design →</a>
                     </div>
 
                     {/* Card 3 — Tall: Maintenance */}
-                    <div className="bento-card bento-card-tall">
+                    <div className="bento-card bento-card-tall reveal reveal-delay-2">
                         <div className="bento-card-number">04 — Support</div>
                         <div className="bento-icon-wrap">◉</div>
                         <div className="bento-card-title">Maintenance</div>
@@ -50,10 +51,11 @@ export default function BentoGrid() {
                                 <div className="bento-metric-label">Réponse</div>
                             </div>
                         </div>
+                        <a href="#contact" className="bento-cta bento-cta-sm">Demander un devis →</a>
                     </div>
 
                     {/* Card 2 — Medium: Dev */}
-                    <div className="bento-card">
+                    <div className="bento-card reveal reveal-delay-3">
                         <div className="bento-card-number">02 — Dev</div>
                         <div className="bento-icon-wrap">◆</div>
                         <div className="bento-card-title">Développement Hardcore</div>
@@ -62,10 +64,11 @@ export default function BentoGrid() {
                             et intégrations sur-mesure.
                         </p>
                         <span className="bento-card-tag">Next.js · TypeScript · API</span>
+                        <a href="#contact" className="bento-cta bento-cta-sm">Créer mon site →</a>
                     </div>
 
                     {/* Card 4 — Medium: SEO */}
-                    <div className="bento-card">
+                    <div className="bento-card reveal reveal-delay-4">
                         <div className="bento-card-number">03 — SEO</div>
                         <div className="bento-icon-wrap">◎</div>
                         <div className="bento-card-title">Stratégie SEO</div>
@@ -74,6 +77,7 @@ export default function BentoGrid() {
                             pour un trafic organique durable.
                         </p>
                         <span className="bento-card-tag">SEO · Analytics · Core Web Vitals</span>
+                        <a href="#contact" className="bento-cta bento-cta-sm">Booster mon SEO →</a>
                     </div>
 
                 </div>

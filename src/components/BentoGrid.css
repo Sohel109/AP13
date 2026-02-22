@@ -191,6 +191,30 @@
     letter-spacing: 0.08em;
 }
 
+/* CTA link at card bottom — inspired by jalis.fr */
+.bento-cta {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+}
+
+.bento-cta:hover {
+    border-bottom-color: var(--accent);
+    letter-spacing: 0.1em;
+}
+
+.bento-cta-sm {
+    font-size: 0.74rem;
+}
+
 @media (max-width: 900px) {
     .bento-grid {
         grid-template-columns: 1fr 1fr;

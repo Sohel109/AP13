@@ -4,13 +4,13 @@ export default function Team() {
     return (
         <section className="team" id="team">
             <div className="container">
-                <div className="section-header">
+                <div className="section-header reveal">
                     <div className="section-label">L'Équation AP13</div>
                     <h2 className="section-title">Deux esprits.<br />Une structure agile.</h2>
                     <p className="section-desc">Nous traitons chaque projet comme si c'était le nôtre. Parce que votre succès, c'est notre référence.</p>
                 </div>
 
-                <div className="equation-grid">
+                <div className="equation-grid reveal reveal-delay-1">
                     <div className="team-card">
                         <div className="team-avatar">A</div>
                         <div className="team-role">Co-fondateur · Design Lead</div>

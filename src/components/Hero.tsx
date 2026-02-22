@@ -1,6 +1,31 @@
+import { useState, useEffect } from 'react';
 import './Hero.css';
 
+const TYPED_WORDS = ['convertissent.', 'performent.', 'durent.', 'impactent.'];
+
 export default function Hero() {
+    const [wordIndex, setWordIndex] = useState(0);
+    const [displayed, setDisplayed] = useState('');
+    const [deleting, setDeleting] = useState(false);
+
+    useEffect(() => {
+        const current = TYPED_WORDS[wordIndex];
+        let timeout: ReturnType<typeof setTimeout>;
+
+        if (!deleting && displayed.length < current.length) {
+            timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 80);
+        } else if (!deleting && displayed.length === current.length) {
+            timeout = setTimeout(() => setDeleting(true), 1800);
+        } else if (deleting && displayed.length > 0) {
+            timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), 40);
+        } else if (deleting && displayed.length === 0) {
+            setDeleting(false);
+            setWordIndex((wordIndex + 1) % TYPED_WORDS.length);
+        }
+
+        return () => clearTimeout(timeout);
+    }, [displayed, deleting, wordIndex]);
+
     return (
         <section className="hero" id="hero">
             <div className="hero-bg" />
@@ -17,8 +42,10 @@ export default function Hero() {
                 </h1>
 
                 <p className="hero-subtitle animate-fadeInUp animate-delay-3">
-                    Un duo, deux expertises, zéro compromis. Nous bâtissons des expériences
-                    numériques qui convertissent — et qui durent.
+                    Un duo, deux expertises, zéro compromis. Nous bâtissons des expériences numériques qui{' '}
+                    <span className="hero-typed">
+                        {displayed}<span className="hero-cursor">|</span>
+                    </span>
                 </p>
 
                 <div className="hero-actions animate-fadeInUp animate-delay-4">
@@ -28,6 +55,21 @@ export default function Hero() {
                     <a href="#ecosystem" className="btn-secondary">
                         Découvrir l'expertise
                     </a>
+                </div>
+
+                {/* Trust badges — inspired by Jalis */}
+                <div className="hero-trust animate-fadeInUp animate-delay-5">
+                    {[
+                        { icon: '◆', label: 'Made in France' },
+                        { icon: '◎', label: 'Google-ready SEO' },
+                        { icon: '✦', label: 'Livré en 3–6 semaines' },
+                        { icon: '◉', label: '100% satisfaction' },
+                    ].map((b) => (
+                        <div className="hero-trust-badge" key={b.label}>
+                            <span className="hero-trust-icon">{b.icon}</span>
+                            {b.label}
+                        </div>
+                    ))}
                 </div>
 
                 <div className="hero-stats animate-fadeInUp animate-delay-5">
