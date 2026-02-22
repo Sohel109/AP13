@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
@@ -12,6 +12,7 @@ const services = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -35,8 +36,13 @@ export default function Navbar() {
         {/* Services with dropdown */}
         <li
           className="nav-item-dropdown"
-          onMouseEnter={() => setDropdownOpen(true)}
-          onMouseLeave={() => setDropdownOpen(false)}
+          onMouseEnter={() => {
+            if (closeTimer.current) clearTimeout(closeTimer.current);
+            setDropdownOpen(true);
+          }}
+          onMouseLeave={() => {
+            closeTimer.current = setTimeout(() => setDropdownOpen(false), 200);
+          }}
         >
           <button className={`nav-dropdown-trigger ${dropdownOpen ? 'open' : ''}`}>
             Services
