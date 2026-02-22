@@ -34,6 +34,7 @@
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 2.5rem;
     list-style: none;
 }
@@ -51,6 +52,125 @@
     color: var(--text-primary);
 }
 
+/* ===== DROPDOWN ===== */
+.nav-item-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.nav-dropdown-trigger:hover,
+.nav-dropdown-trigger.open {
+    color: var(--text-primary);
+}
+
+.nav-chevron {
+    display: inline-block;
+    font-size: 1rem;
+    transition: transform 0.25s ease;
+    line-height: 1;
+    margin-top: 1px;
+}
+
+.nav-dropdown-trigger.open .nav-chevron {
+    transform: rotate(90deg);
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: calc(100% + 1.25rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    background: #161616;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.nav-dropdown.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.nav-dropdown-item:hover {
+    background: rgba(204, 255, 0, 0.04);
+    color: var(--text-primary);
+}
+
+.nav-dropdown-item:hover .nav-dropdown-icon {
+    color: var(--accent);
+    border-color: rgba(204, 255, 0, 0.3);
+    background: rgba(204, 255, 0, 0.06);
+}
+
+.nav-dropdown-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.nav-dropdown-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.15rem;
+}
+
+.nav-dropdown-desc {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+}
+
+/* CTA button */
 .nav-cta {
     font-size: 0.78rem;
     font-weight: 700;
