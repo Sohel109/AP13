@@ -47,7 +47,6 @@
     padding: 0.5rem 1.6rem;
     margin: 0 0.25rem;
     border: 1px solid var(--border);
-    border-radius: 100px;
     font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -58,12 +57,12 @@
 }
 
 .trust-badge:hover {
-    border-color: rgba(204, 255, 0, 0.3);
-    color: var(--accent);
-    background: rgba(204, 255, 0, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .trust-badge-icon {
     font-size: 0.9rem;
-    opacity: 0.7;
+    opacity: 0.6;
 }

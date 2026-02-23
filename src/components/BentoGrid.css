@@ -29,7 +29,6 @@
     gap: 1px;
     background: var(--border);
     border: 1px solid var(--border);
-    border-radius: 12px;
     overflow: hidden;
 }
 
@@ -46,7 +45,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(204, 255, 0, 0.06) 0%, transparent 60%);
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.04) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.4s;
     pointer-events: none;
@@ -57,7 +56,7 @@
 }
 
 .bento-card:hover {
-    background: #191919;
+    background: #181818;
 }
 
 /* Top border highlight on hover */
@@ -68,7 +67,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: var(--accent);
+    background: var(--text-primary);
     transform: scaleX(0);
     transition: transform 0.35s ease;
 }
@@ -91,7 +90,7 @@
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.14em;
-    color: var(--accent);
+    color: var(--text-secondary);
     text-transform: uppercase;
     margin-bottom: 2rem;
 }
@@ -99,7 +98,6 @@
 .bento-icon-wrap {
     width: 48px;
     height: 48px;
-    border-radius: 10px;
     border: 1px solid var(--border);
     display: flex;
     align-items: center;
@@ -111,8 +109,8 @@
 }
 
 .bento-card:hover .bento-icon-wrap {
-    border-color: rgba(204, 255, 0, 0.3);
-    background: rgba(204, 255, 0, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .bento-card-title {
@@ -137,20 +135,18 @@
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.3rem 0.8rem;
-    background: rgba(204, 255, 0, 0.06);
-    border: 1px solid rgba(204, 255, 0, 0.15);
-    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--text-secondary);
 }
 
 .bento-card-visual {
     margin-top: 2rem;
     border: 1px solid var(--border);
-    border-radius: 8px;
     overflow: hidden;
     background: var(--bg-secondary);
     padding: 1.5rem;
@@ -161,14 +157,12 @@
 
 .visual-bar {
     height: 6px;
-    border-radius: 3px;
-    background: linear-gradient(90deg, rgba(204, 255, 0, 0.6), rgba(204, 255, 0, 0.1));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.08));
 }
 
 .visual-bar-sm {
     height: 6px;
-    border-radius: 3px;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .bento-card-metrics {
@@ -180,7 +174,7 @@
 .bento-metric-val {
     font-size: 1.6rem;
     font-weight: 800;
-    color: var(--accent);
+    color: var(--text-primary);
     letter-spacing: -0.02em;
 }
 
@@ -191,7 +185,7 @@
     letter-spacing: 0.08em;
 }
 
-/* CTA link at card bottom — inspired by jalis.fr */
+/* CTA link at card bottom */
 .bento-cta {
     display: inline-flex;
     align-items: center;
@@ -200,14 +194,15 @@
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--accent);
-    border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 2px;
     transition: all 0.2s;
 }
 
 .bento-cta:hover {
-    border-bottom-color: var(--accent);
+    color: var(--text-primary);
+    border-bottom-color: var(--text-primary);
     letter-spacing: 0.1em;
 }
 

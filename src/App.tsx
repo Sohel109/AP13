@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -18,6 +19,19 @@ import PagePrivacy from './pages/PagePrivacy';
 
 function HomePage() {
   useScrollReveal();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        // Small timeout ensures the DOM has fully rendered the sections
+        setTimeout(() => element.scrollIntoView({ behavior: 'smooth' }), 50);
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <Navbar />

@@ -17,7 +17,7 @@
     justify-content: center;
     padding: 0 1rem;
     padding-top: 2.5rem;
-    color: var(--accent);
+    color: var(--text-secondary);
     font-size: 1.2rem;
     opacity: 0.5;
 }
@@ -25,7 +25,6 @@
 .process-step {
     padding: 2.5rem;
     border: 1px solid var(--border);
-    border-radius: 10px;
     background: var(--bg-card);
     position: relative;
     overflow: hidden;
@@ -33,24 +32,24 @@
 }
 
 .process-step:hover {
-    border-color: rgba(204, 255, 0, 0.2);
-    background: #191919;
+    border-color: rgba(255, 255, 255, 0.15);
+    background: #181818;
     transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
 .process-num {
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: -0.04em;
-    color: rgba(204, 255, 0, 0.1);
+    color: rgba(255, 255, 255, 0.06);
     line-height: 1;
     margin-bottom: 1rem;
     transition: color 0.3s;
 }
 
 .process-step:hover .process-num {
-    color: rgba(204, 255, 0, 0.25);
+    color: rgba(255, 255, 255, 0.14);
 }
 
 .process-step-label {
@@ -58,7 +57,7 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
@@ -84,7 +83,6 @@
     padding: 0.3rem 0.75rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border);
-    border-radius: 100px;
     font-size: 0.68rem;
     font-weight: 600;
     color: var(--text-muted);
@@ -94,7 +92,7 @@
 
 .process-deliverable::before {
     content: '→';
-    color: var(--accent);
+    color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {

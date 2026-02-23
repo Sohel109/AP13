@@ -16,12 +16,12 @@
     font-size: 1.5rem;
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: var(--accent);
+    color: var(--text-primary);
     margin-bottom: 0.75rem;
 }
 
 .footer-logo span {
-    color: var(--text-primary);
+    color: var(--text-secondary);
 }
 
 .footer-tagline {
@@ -41,7 +41,6 @@
     width: 36px;
     height: 36px;
     border: 1px solid var(--border);
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,9 +50,9 @@
 }
 
 .footer-social:hover {
-    border-color: rgba(204, 255, 0, 0.3);
-    color: var(--accent);
-    background: rgba(204, 255, 0, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .footer-col-title {
@@ -98,7 +97,7 @@
 }
 
 .footer-copy span {
-    color: var(--accent);
+    color: var(--text-secondary);
 }
 
 .footer-legal {

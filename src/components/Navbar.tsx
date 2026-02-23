@@ -26,6 +26,19 @@ export default function Navbar() {
     setDropdownOpen(false);
   }, [location]);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        // Update URL hash without jumping
+        window.history.pushState(null, '', `/${hash}`);
+      }
+    }
+    // If not on homepage, let the Link navigate naturally to /#hash
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <Link to="/" className="nav-logo">
@@ -62,11 +75,11 @@ export default function Navbar() {
           </div>
         </li>
 
-        <li><Link to="/#team">L'Équipe</Link></li>
-        <li><Link to="/#process">Processus</Link></li>
+        <li><Link to="/#team" onClick={(e) => handleNavClick(e, '#team')}>L'Équipe</Link></li>
+        <li><Link to="/#process" onClick={(e) => handleNavClick(e, '#process')}>Processus</Link></li>
       </ul>
 
-      <Link to="/#contact" className="nav-cta">Démarrer un projet</Link>
+      <Link to="/#contact" className="nav-cta" onClick={(e) => handleNavClick(e, '#contact')}>Démarrer un projet</Link>
     </nav>
   );
 }
