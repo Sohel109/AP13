@@ -39,9 +39,17 @@ export default function Navbar() {
     // If not on homepage, let the Link navigate naturally to /#hash
   };
 
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Remove hash from URL if present without jumping
+      window.history.pushState(null, '', '/');
+    }
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <Link to="/" className="nav-logo">
+      <Link to="/" className="nav-logo" onClick={handleLogoClick}>
         AP<span>13</span>
       </Link>
 
