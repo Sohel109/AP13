@@ -13,7 +13,7 @@ export default function Footer() {
                             Précision, rapidité, approche technique rigoureuse.
                         </p>
                         <div className="footer-socials">
-                            <a href="#" className="footer-social" aria-label="LinkedIn">in</a>
+                            <a href="https://www.linkedin.com/company/studio-ap13/" target="_blank" rel="noreferrer" className="footer-social" aria-label="LinkedIn">in</a>
                             <a href="#" className="footer-social" aria-label="Twitter/X">𝕏</a>
                             <a href="#" className="footer-social" aria-label="GitHub">⌥</a>
                         </div>
